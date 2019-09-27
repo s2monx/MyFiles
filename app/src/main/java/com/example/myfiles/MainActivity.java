@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 listfile.add(tenfile);
 
                 try {
-//                    Luu vao bo nho trong
+                    //Luu vao bo nho trong
                     FileOutputStream fout = openFileOutput(tenfile, Context.MODE_PRIVATE);
                     fout.write(etNoidung.getText().toString().getBytes());
                     fout.close();
@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
 //                    editor.commit();
 
 
-                    SharedPreferences preferences = getApplicationContext().getSharedPreferences(tenfile, 0);
-                    etNoidung.setText(preferences.getString("Content", null));
+                    SharedPreferences pre = getApplicationContext().getSharedPreferences(tenfile, 0);
+                    etNoidung.setText(pre.getString("Content", null));
 
 
                 }catch (Exception e){
