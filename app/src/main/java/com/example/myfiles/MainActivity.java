@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
         ////////////Xu ly spinner
         final ArrayList<String> listfile = new ArrayList<>();
         listfile.add("Hello");
-        listfile.add("Goodbye");
-        listfile.add("Aloha");
-        listfile.add("Bonjour");
         final Spinner spFile = findViewById(R.id.spFile);
         ArrayAdapter<String> adapterFile = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_single_choice, listfile);
@@ -88,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 listfile.add(tenfile);
 
                 try {
-                    //Luu vao bo nho trong
-//                    FileOutputStream fout = openFileOutput(tenfile, Context.MODE_PRIVATE);
-//                    fout.write(etNoidung.getText().toString().getBytes());
-//                    fout.close();
+//                    Luu vao bo nho trong
+                    FileOutputStream fout = openFileOutput(tenfile, Context.MODE_PRIVATE);
+                    fout.write(etNoidung.getText().toString().getBytes());
+                    fout.close();
 
                     //
 //                    SharedPreferences preferences = getApplicationContext().getSharedPreferences(tenfile,0);
